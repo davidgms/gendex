@@ -26,7 +26,7 @@ export function usePokemonApi() {
 	 * @returns {string} - active pokémon types
 	 */
 	const fetchPokemonTypes = async (id) => {
-		if (pokemonTypesCache.has(id)) return pokemonTypesCache.get(id) {}
+		if (pokemonTypesCache.has(id)) return pokemonTypesCache.get(id)
 		try {
 			const pokemonData = await $fetch(`https://pokeapi.co/api/v2/pokemon/${id}`)
 			const types = pokemonData.types
@@ -40,7 +40,7 @@ export function usePokemonApi() {
 	/**
 	 * Fetch the pokémon generation by id (id = generation version/number)
 	 * @param {number} id - pokémon generation id
-	 * @returns {object} - pokémon generation data
+	 * @returns {object} - pokémon generation data types
 	 */
 	const fetchGeneration = async (generationId) => {
 		return await $fetch(`https://pokeapi.co/api/v2/generation/${generationId}`)
