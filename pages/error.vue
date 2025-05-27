@@ -1,5 +1,5 @@
 <script setup>
-    import GendexHeader from '../components/GendexHeader.vue';
+    const GendexHeader = defineAsyncComponent(() => import('~/components/GendexHeader.vue'));
 </script>
 <template>
     <div>

@@ -1,13 +1,22 @@
 <script setup>
 import { ref, onMounted } from 'vue';
 import autoAnimate from "@formkit/auto-animate";
-import GendexHeader from '../../components/GendexHeader.vue';
-import LoadingOverlay from 'vue-loading-overlay'
-import 'vue-loading-overlay/dist/css/index.css'
+import LoadingOverlay from 'vue-loading-overlay';
+import 'vue-loading-overlay/dist/css/index.css';
+
+useHead({
+    meta: [
+        {
+            name: 'description',
+            content: 'GenDex is a generation-based Pokédex built with Nuxt 3 and PokéAPI. Select a generation to explore and search for Pokémon!'
+        }
+    ]
+})
 
 const isLoading = ref(true)
 const generations = ref(null);
 const animateBlock = ref();
+const GendexHeader = defineAsyncComponent(() => import('~/components/GendexHeader.vue'));
 
 onMounted(async () => {
     try {

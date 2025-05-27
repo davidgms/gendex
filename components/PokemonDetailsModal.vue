@@ -3,6 +3,7 @@
     import { VueFinalModal } from 'vue-final-modal';
     import LoadingOverlay from 'vue-loading-overlay';
     import { handleImgError } from '~/utils/imageErrorHandler';
+    import 'vue-final-modal/style.css';
 
     const isLoading = ref(true);
     const imagesToLoad = ref(0);
@@ -77,7 +78,7 @@
             <div 
                 v-if="activePokemon" :key="activePokemon.id"
                 class="c-pokemon-details-mob__container">
-                <LoadingOverlay :active="isLoading" :is-full-page="false" loader="dots" color="#00DC82" background-color="#FFFACD" :opacity="1" :z-index="1500"/>
+                <LoadingOverlay :active="isLoading" :is-full-page="false" loader="dots" color="#00ba6e" background-color="#FFFACD" :opacity="1" :z-index="1500"/>
                 <div class="c-pokemon-details-mob__info">
                     <h2>{{ activePokemon.name }}</h2>
                     <PokemonTypes

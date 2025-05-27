@@ -2,7 +2,6 @@
 export default defineNuxtConfig({
   compatibilityDate: '2024-11-01',
   devtools: { enabled: true },
-  css: ['vue-final-modal/style.css'],
 
   modules: [
     '@nuxt/eslint',
@@ -12,6 +11,13 @@ export default defineNuxtConfig({
     '@formkit/auto-animate/nuxt',
     'nuxt-viewport',
   ],
+  app: {
+    head: {
+      htmlAttrs: {
+        lang: 'en'
+      }
+    }
+  },
   image: {
     provider: 'cloudinary',
     cloudinary: {

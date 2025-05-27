@@ -1,78 +1,115 @@
-# gendex
-Pokédex sorted by game generations using Vue3, Nuxt3 and PokéAPI
+# GenDex
 
-# Nuxt Minimal Starter
+GenDex is a modern Pokédex web app built with Vue 3, Nuxt 3, and PokéAPI.  
+It allows users to explore Pokémon by game generation: simply select a generation to browse, search, and view detailed information about Pokémon from that era.
 
-Look at the [Nuxt documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+## Features
 
-## Setup
+- 🌱 **Generation-based navigation:** Select a generation to see only Pokémon from that era.
+- 🔍 **Search:** Quickly find Pokémon by name or number within the selected generation.
+- 📄 **Detailed view:** See images, types, and pokédex entry for each Pokémon.
+- ⚡ **Responsive design:** Works great on desktop and mobile.
+- ⚙️ **Fast & modern:** Built with Nuxt 3, Vue 3, and uses PokéAPI for real-time data.
 
-Make sure to install dependencies:
+## Demo
+
+> https://gendex.onrender.com
+
+## Getting Started
+
+### Prerequisites
+
+- Node.js (v18+ recommended)
+- npm, yarn, pnpm, or bun
+
+### Setup
+
+Install dependencies:
 
 ```bash
 # npm
 npm install
 
-# pnpm
-pnpm install
-
 # yarn
 yarn install
+
+# pnpm
+pnpm install
 
 # bun
 bun install
 ```
 
-## Development Server
+### Development
 
-Start the development server on `http://localhost:3000`:
+Start the development server:
 
 ```bash
 # npm
 npm run dev
 
-# pnpm
-pnpm dev
-
 # yarn
 yarn dev
+
+# pnpm
+pnpm dev
 
 # bun
 bun run dev
 ```
 
-## Production
+Visit [http://localhost:3000](http://localhost:3000) to view the app.
 
-Build the application for production:
+### Production
+
+Build for production:
 
 ```bash
 # npm
 npm run build
 
-# pnpm
-pnpm build
-
 # yarn
 yarn build
+
+# pnpm
+pnpm build
 
 # bun
 bun run build
 ```
 
-Locally preview production build:
+Preview the production build locally:
 
 ```bash
 # npm
 npm run preview
 
-# pnpm
-pnpm preview
-
 # yarn
 yarn preview
+
+# pnpm
+pnpm preview
 
 # bun
 bun run preview
 ```
 
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+## Project Structure
+
+- `pages/` — Nuxt pages (including generation selection and Pokémon details)
+- `components/` — UI components (lists, details, headers, etc.)
+- `composables/` — Reusable logic (API fetch, favorites, etc.)
+- `utils/` — Utility functions (formatting, helpers)
+- `assets/` — Static assets (images, styles)
+
+## Data Source
+
+All Pokémon data is fetched live from [PokéAPI](https://pokeapi.co/).
+
+## License
+
+[MIT](LICENSE)
+
+---
+
+> Made with ❤️ using Nuxt 3 and PokéAPI, for learning purposes.

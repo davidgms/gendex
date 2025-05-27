@@ -68,7 +68,7 @@
             v-if="activePokemon"
             :key="activePokemon.id"
             class="c-pokemon-details-desk__container">
-            <LoadingOverlay :active="isLoading" :is-full-page="false" loader="dots" color="#00DC82" background-color="#FFFACD" :opacity="1" :z-index="900"/>
+            <LoadingOverlay :active="isLoading" :is-full-page="false" loader="dots" color="#00ba6e" background-color="#FFFACD" :opacity="1" :z-index="900"/>
             <div class="c-pokemon-details-desk__info">
                 <h2>{{ activePokemon.name }}</h2>
                 <PokemonTypes

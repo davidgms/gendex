@@ -4,11 +4,18 @@
     import autoAnimate from "@formkit/auto-animate";
     import { useNuxtApp } from '#app';
     import { useModal } from 'vue-final-modal';
-    import GendexHeader from '../../components/GendexHeader.vue';
-    import GenerationsPagination from '../../components/GenerationsPagination.vue';
     import LoadingOverlay from 'vue-loading-overlay';
     import 'vue-loading-overlay/dist/css/index.css';
     import { usePokemonApi } from "../../composables/usePokemonApi.js";
+
+    useHead({
+        meta: [
+            {
+                name: 'description',
+                content: 'Switch between all Pokémon generations, search Pokémons by name ou number, visualize Pokémon details, images and more!'
+            }
+        ]
+    })
     
     const { fetchFlavorText, fetchPokemonTypes, fetchGeneration } = usePokemonApi();
     const { $viewport } = useNuxtApp()
@@ -25,6 +32,8 @@
     const PokemonList = defineAsyncComponent(() => import('~/components/PokemonList.vue'));
     const PokemonDetails = defineAsyncComponent(() => import('~/components/PokemonDetails.vue'));
     const PokemonDetailsModal = defineAsyncComponent(() => import('~/components/PokemonDetailsModal.vue'));
+    const GendexHeader = defineAsyncComponent(() => import('~/components/GendexHeader.vue'));
+    const GenerationsPagination = defineAsyncComponent(() => import('~/components/GenerationsPagination.vue'));
 
     const audioRef = ref(null);
     const searchQuery = ref('');
@@ -195,12 +204,12 @@
 <template>
     <div>
         <LoadingOverlay :active="isLoading" :is-full-page="true" color="#00DC82" :opacity="0.9" :z-index="1500" />
+        <GendexHeader 
+            :generationName="generation.name || ''" 
+            :genPokemonListLength="genPokemonList.length">
+        </GendexHeader>
+
         <div class="c-generation-page">
-            <GendexHeader 
-                :generationName="generation.name || ''" 
-                :genPokemonListLength="genPokemonList.length">
-            </GendexHeader>
-    
             <GenerationsPagination v-if="allGenerations && typeof allGenerations.count === 'number'"
                 :count="allGenerations.count" 
                 :currentId="currentId">
@@ -247,9 +256,11 @@
 
 <style scoped lang="scss">
 .c-generation-page {
-    height: 100%;    
+    min-height: calc(100dvh - 108px);   
     background: linear-gradient(180deg,rgba(255, 255, 255, 0.5) 0%, rgba(0, 220, 128, 0.397) 100%);
     position: relative;
+    display: flex;
+    flex-direction: column;
     &__pokedex-block {
         width: 100vw;
         display: flex;
@@ -283,7 +294,7 @@
             }
             &:hover {
                 span {
-                    color: #00af66;
+                    color: #00ba6e;
                     opacity: 1;
                 }
             }
@@ -299,13 +310,14 @@
 
 @media (max-width: 768px) {
     .c-generation-page {
+        min-height: calc(100dvh - 94px); 
         &__pokedex-block {
             gap: 0;
             margin-top: 20px;
         }
         &__gen-controls {
             a {
-                top: 16%;
+                top: 3%;
                 width: 10%;
                 height: max-content;
             }

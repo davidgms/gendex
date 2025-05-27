@@ -40,7 +40,7 @@
 
 <template>
     <div class="c-pokemon-list">
-        <LoadingOverlay :active="isLoading" :is-full-page="false" loader="dots" color="#00DC82" background-color="#F0F8FF" :opacity="1" :z-index="900"/>
+        <LoadingOverlay :active="isLoading" :is-full-page="false" loader="dots" color="#00ba6e" background-color="#F0F8FF" :opacity="1" :z-index="900"/>
         <PokemonSearchBar 
             :searchQuery="searchQuery"
             @update:searchQuery="val => emit('update:searchQuery', val)"
