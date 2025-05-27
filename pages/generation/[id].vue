@@ -294,7 +294,7 @@
             }
             &:hover {
                 span {
-                    color: #00ba6e;
+                    color: #019e5e;
                     opacity: 1;
                 }
             }

@@ -49,7 +49,7 @@ defineProps({
         text-decoration: none;
         &.active, &:disabled {
             color: #000;
-            border-bottom: 4px solid #00ba6e;
+            border-bottom: 4px solid #019e5e;
             cursor: default;
             opacity: 1;
             font-weight: bold;

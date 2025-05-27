@@ -22,7 +22,7 @@ export default defineNuxtConfig({
     provider: 'cloudinary',
     cloudinary: {
       baseURL: `https://res.cloudinary.com/dssqs4a1p/image/fetch/f_auto,q_auto/`,
-    },
+    }
   },
   fonts: {
     families: [

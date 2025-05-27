@@ -22,7 +22,7 @@
                 <img src="/logo-gendex.png" alt="Gendex logo" loading="lazy" />
             </div>
             <div class="c-gendex-header__gendex-text">
-                <h1>Gen<span style="color: #00ba6e;">Dex</span></h1>
+                <h1>Gen<span style="color: #019e5e;">Dex</span></h1>
                 <p>Nuxt3 Pokedex</p>
             </div>
         </NuxtLink>
@@ -70,8 +70,8 @@
     &__gendex-img {
         max-width: 75px;
         img {
-            width: 100%;
-            height: auto;
+            width: 75px;
+            height: 71px;
         } 
     }
     &__title {
@@ -106,6 +106,10 @@
         }
         &__gendex-img {
             max-width: 60px;
+            img {
+                width: 60px;
+                height: 57px;
+            }
         }
     }
 }

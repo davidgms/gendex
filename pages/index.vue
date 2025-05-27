@@ -37,7 +37,7 @@ onMounted(async () => {
 
 <template>
     <div>
-        <LoadingOverlay :active="isLoading" :is-full-page="true" color="#00DC82" :opacity="0.9" />
+        <LoadingOverlay :active="isLoading" :is-full-page="true" color="#019e5e" :opacity="0.9" />
         <div class="c-generation-selection">
             <GendexHeader/>
             <h2 class="c-generation-selection__subtitle">Select one generation:</h2>
@@ -71,7 +71,7 @@ onMounted(async () => {
     background: linear-gradient(180deg,rgba(255, 255, 255, 0.5) 0%, rgba(0, 220, 128, 0.397) 100%);
     &__subtitle {
         text-align: center;
-        font-size: clamp(22px, 2vw, 32px);
+        font-size: clamp(22px, 2vw, 28px);
         margin-top: 2%;
         margin-bottom: 0;
     }
@@ -121,11 +121,11 @@ onMounted(async () => {
         }
     }
     &__gen-image {
-        width: 100%;
-        height: auto;
+        width: 275px;
+        max-width: 100%;
+        height: 190px;
         max-height: 200px;
         object-fit: contain;
-        margin-bottom: 10px;
     }
 
 }
@@ -142,8 +142,12 @@ onMounted(async () => {
         }
         &__gen-card {
             max-width: 90%;
+            min-height: 180px;
         }
         &__gen-image {
+            width: 108px;
+            max-width: 100%;
+            height: 118px;
             max-height: 125px;
         }
     }

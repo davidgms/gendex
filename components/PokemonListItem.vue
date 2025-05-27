@@ -68,7 +68,7 @@
         background-color: rgba(213, 255, 203, 0.856);
     }
     img {
-        width: auto;
+        width: 73px;
         height: 60px;
     }
     span {
