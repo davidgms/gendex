@@ -19,7 +19,7 @@
         :class="{ 'gen-page': genPokemonListLength && genPokemonListLength > 0}">
         <NuxtLink :to="'/'" class="c-gendex-header__gendex">
             <div class="c-gendex-header__gendex-img">
-                <img src="/logo-gendex.png" alt="Gendex logo" loading="lazy" />
+                <img src="/logo-gendex.png" alt="Gendex logo" loading="lazy">
             </div>
             <div class="c-gendex-header__gendex-text">
                 <h1>Gen<span style="color: #019e5e;">Dex</span></h1>

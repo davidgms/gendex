@@ -42,7 +42,6 @@ onMounted(async () => {
             <GendexHeader/>
             <h2 class="c-generation-selection__subtitle">Select one generation:</h2>
             <div ref="animateBlock" class="c-generation-selection__gen-section">
-                <!-- Itera sobre as gerações e cria um bloco para cada uma -->
                 <div
                     v-for="(generation, index) in generations" :key="'generation-' + index"
                     class="c-generation-selection__gen-block">

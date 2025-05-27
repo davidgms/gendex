@@ -17,7 +17,6 @@
 * {
   box-sizing: border-box;
   font-family: "Outfit", sans-serif;
-  font-display: swap;
   font-optical-sizing: auto;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;

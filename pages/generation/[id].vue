@@ -155,14 +155,14 @@
                 return
             }
             
-            const genData = await fetchGeneration(generationId);
+            const genData = fetchGeneration(generationId);
             generation.value = genData;
 
             const pokemonDetails = await Promise.all(
                 genData.pokemon_species.map(async (species) => {
                     const id = parseInt(species.url.split('/').filter(Boolean).pop());
-                    const flavorText = await fetchFlavorText(id);
-                    const pokemonType = await fetchPokemonTypes(id);
+                    const flavorText = fetchFlavorText(id);
+                    const pokemonType = fetchPokemonTypes(id);
 
                     return {
                         id,
