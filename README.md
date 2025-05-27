@@ -6,8 +6,14 @@ It allows users to explore Pokémon by game generation: simply select a generati
 ## Features
 
 - 🌱 **Generation-based navigation:** Select a generation to see only Pokémon from that era.
+  ![image](https://github.com/user-attachments/assets/3d8c6d88-8c37-403b-a19d-468404aa20f0)
+
 - 🔍 **Search:** Quickly find Pokémon by name or number within the selected generation.
+  ![image](https://github.com/user-attachments/assets/47f3bc8b-9167-4341-8c36-b919fa172d04)
+
 - 📄 **Detailed view:** See images, types, and pokédex entry for each Pokémon.
+  ![image](https://github.com/user-attachments/assets/da410268-0322-4829-b37b-66e6050eb0cd)
+
 - ⚡ **Responsive design:** Works great on desktop and mobile.
 - ⚙️ **Fast & modern:** Built with Nuxt 3, Vue 3, and uses PokéAPI for real-time data.
 
