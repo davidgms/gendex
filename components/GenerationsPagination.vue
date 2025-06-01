@@ -10,7 +10,7 @@ defineProps({
 	<div class="c-generation-pagination__container">
 		<template v-if="count">
 			<NuxtLink
-			  v-for="gen in count"
+			  v-for="(gen, index) in count"
 			  :key="gen"
 			  :to="`/generation/${gen}`"
 			  class="c-generation-pagination__btn"
